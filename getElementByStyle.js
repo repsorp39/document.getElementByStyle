@@ -13,7 +13,7 @@
  */
 
 function getElementByStyle(style, rootElement = null) {
-  if (!/^(([a-z- ])+:([A-Za-z0-9-(), ])+;?)+$/.test(style)) {
+  if (!/^(([a-z-\s])+:([A-Za-z0-9-(),\s])+;?)+$/.test(style)) {
     throw new Error(
       `${style} format  is invalid as style.Declarations should be made like in css. e.g:'color:rgb(8,8,8);background-color:rgb(177,87,0)'`
     );
